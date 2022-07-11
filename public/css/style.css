@@ -1,0 +1,168 @@
+/*Si tiene el asterisco adelante significa que aplica para todos*/
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+img{
+  width: 100%;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  /*border: 3px solid green;*/
+  background-color: var(--amarillo);
+  display: flex;
+  flex-direction: column;
+}
+
+/************HEADER****************/
+
+/*LOGO-BARRA-LUPA-PAGO TARJETA*/
+.logo-container{
+  /*border: 3px solid red;*/
+  display: flex;
+  flex-direction: column;
+}
+
+/*MENU HAMBURGESA*/
+.burguer-container{
+  /*border: 3px solid red;*/
+  display: flex;
+  justify-content: center;
+}
+
+.burger-menu{
+  display: flex;
+  /*border: 2px solid black;*/
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: var(--azul);
+  color: var(--blanco);
+}
+
+/*MENU NAVEGACION*/
+.menu-container{
+  /*border: 3px solid red;*/
+  display: none;
+}
+/*LOGO-BARRA DE BUSQUEDA*/
+.logo-bar-container{
+  /*border: 3px solid gray;*/
+  display: flex;
+}
+
+/*FRASE TRAJETA*/
+.card-container{
+  /*border: 3px solid gray;*/
+  padding: 15px;
+}
+
+.card-tittle{
+  font-weight: 400;
+  text-align: center;   
+}
+
+
+.card-tittle i{
+  margin-right: 10px;
+}
+
+/*LOGO*/
+.logo{
+  /*border: 3px solid pink;*/
+  width: 50%;
+  padding: 10px;
+}
+
+/*BOTON DE BUSQUEDA*/
+.search-button-container{
+  /*border: 3px solid pink;*/
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*CONTENEDOR DE BUSQUEDA*/
+.sarch-container{
+  /*border: 3px solid brown;*/
+  display: flex;
+  height: 30px;
+  width: 90%;
+}
+
+input{   
+  width: 95%;
+  border: none;
+  border-radius: 5px 0 5px 0;
+}
+
+button{
+  width: 15%;
+  padding: 1px;
+  border: none;
+  background-color: var(--blanco);
+  border-radius:0 5px 5px 0;
+  margin-left: -4px;
+}
+/************ FIN HEADER****************/
+
+/* Desaparece el menu hamburgesa cuando pasa los 768px)*/
+@media (min-width: 768px) {
+  .logo-container{
+      flex-direction: row;
+  }
+
+  .logo-bar-container{
+      width: 50%;
+  }
+
+  .card-container{
+      width: 50%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .card-container h2{
+      font-size: 18px;
+  }
+
+  .burguer-container{
+      display: none;
+  }
+
+  .menu-container {
+      display: flex ;
+      justify-content: space-between;
+      padding:10px;
+  }
+
+  ul {
+      /*border: 3px solid orange;*/
+      display: flex;
+      width: 45%;
+      justify-content:space-between;
+  }
+}
+
+@media (min-width: 1024px){
+  .card-container h2{
+      font-size: 22px;
+  } 
+}
